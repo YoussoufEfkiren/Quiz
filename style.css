@@ -1,0 +1,161 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    height: 100vh;
+    background-image: url('img/background.jpg'); /* Replace 'background-image.jpg' with your image file */
+    background-size: cover;
+    background-position: center;
+    background-color: #f0f0f0; /* Fallback background color */
+}
+
+/* Timer styles */
+#timer {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+.intro p {
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 20px;
+}
+span{
+    font-size: 55px;
+    color: #ffd5a2;
+}
+/* Container styles */
+.container {
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+}
+
+/* Form styles */
+#quiz-forms {
+    text-align: center;
+    display: none;
+}
+
+#quiz-forms .options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.obj {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 40px;
+    border: 2px solid rgb(0, 238, 255);
+    box-shadow: 0 0 20px 3px rgba(25, 253, 4, 0.5);
+    text-align: center;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.obj:hover {
+    background-color: #0beba0;
+}
+
+/* Progress bar styles */
+#progress-bar {
+    display: none; /* Hide the progress bar initially */
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 500px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+
+#progress {
+    height: 20px;
+    background-color: #4c8baf; /* Green */
+    border-radius: 10px;
+    width: 0;
+    transition: width 0.5s ease-in-out; /* Add animation effect */
+}
+#resultat {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+#resultat h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333; /* Adjust font color for better readability */
+}
+
+#resultat p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #666; /* Adjust font color for better readability */
+}
+/* Media queries for responsiveness */
+@media only screen and (max-width: 600px) {
+    .container {
+        max-width: 100%;
+    }
+    h1{
+        font-size: xx-large;
+        margin: 8px;
+    }
+    #quiz-forms .options{
+        display: flex;
+        justify-content: start;
+        align-items: start;
+    }
+    span{
+        font-size: 45px;
+    }
+    .obj {
+        width: 80%;
+    }
+    .intro p{
+        width: 100%;
+        font-weight: bolder;
+    }
+    #progress-bar {
+        width: 90%;
+    }
+}

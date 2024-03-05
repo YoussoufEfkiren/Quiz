@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Dynamic Form</title>
+</head>
+<body>
+    <div id="quiz-container">
+        <div class="intro" id="intro">
+            <h1>Welcome to the <span>Science</span> Quiz!</h1>
+            <p>Test your knowledge of science with our quiz! From biology to astronomy,
+                 challenge yourself with questions covering various scientific topics.
+                  Let's dive in and explore the wonders of the natural world together! Good luck!</p>
+            <button class="btn btn-primary" onclick="startQuiz()">Start Quiz</button>
+        </div>
+        <div id="quiz-forms" style="display: none;">
+            <!-- Each question will be dynamically inserted here -->
+        </div>
+        <div id="resultat" class="hidden">
+            <!-- Result will be shown here -->
+        </div>
+    </div>
+    <div id="timer">00:00:00</div>
+    <div id="progress-bar">
+        <div id="progress" class="progress"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Make sure to use correct Bootstrap version -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
